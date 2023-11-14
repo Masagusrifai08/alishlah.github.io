@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
+    <style>
+        .aktif{
+            display: block;
+        }
+        ul{
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="header h-screen">
+        <nav class="flex-column sm:flex justify-between bg-transparent">
+            <div class="judul flex justify-between sm:justify-start items-center">
+                <h2 class="text-red-500 font-bold">Al Ishlah</h2>
+                <i class="fas fa-bars text-red-500 block sm:hidden"></i>
+            </div>
+            <ul class="flex-column sm:flex justify-between w-screen sm:w-1/2 text-center text-red-400 font-bold leading-9">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Artikel</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+        <div class="hero h-3/4 sm:h-90 w-screen" style="background-image: url('gmb/1.jpeg'); background-size: cover; background-position: center;">
+            <div class="main bg-red-700 bg-opacity-50 rounded-lg w-3/4 sm:w-1/2 h-1/2 mx-auto flex justify-center items-center relative bottom-[-320px] sm:bottom-[-350px]">
+                <h1 class="text-center font-bold text-black">Selamat Datang di Yayasan <br> Al-Ishlah Hidayatullah</h1>
+            </div>
+        </div>
+    </div>
+    <div class="profil h-screen w-screen flex-column sm:flex justify-center items-center">
+        <div class="gambar bg-red-700 rounded-full mx-auto sm:mx-0 w-1/2 sm:w-1/4 flex justify-center items-center">
+            <img class="mx-auto rounded-full" src="gmb/2.png" alt="" width="200px" height="200px">
+        </div>
+        <div class="flex flex-col justify-center items-center w-screen sm:w-2/4 text-center sm:text-left p-5 text-white">
+            <h2 class="mb-5 text-red-700">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, molestiae ullam? Ea molestiae, modi harum mollitia sequi beatae dolor. Neque nesciunt consequatur voluptatem sapiente tempore hic asperiores omnis, eius quas aliquam enim cum molestiae explicabo totam nulla delectus fugiat in voluptas consequuntur repudiandae voluptate. Cumque distinctio assumenda optio aut esse.<br><br>
+                <b>Moh Agus Rifai<br>
+                Bocah Mbuh</b>
+            </h2>
+        </div>
+    </div>
+    <div class="konten bg-gray-700 flex flex-col sm:flex-row justify-around w-screen h-3/4 sm:h-1/2 p-2 mb-20">
+        <img src="gmb/3.jpeg" alt="" class="w-screen sm:w-1/4 mb-3 h-1/2">
+        <img src="gmb/4.jpeg" alt="" class="w-screen sm:w-1/4 mb-3 h-1/2">
+        <img src="gmb/6.jpeg" alt="" class="w-screen sm:w-1/4 mb-3 h-1/2">
+    </div>
+
+    <div class="footerhead w-screen h-3/4">
+        <div class="kontak w-screen h-3/4 flex items-center p-5">
+            <h2 class="text-red-700">
+                Alamat:<br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, placeat!<br><br>
+                kontak kami:<br>
+                Lorem ipsum dolor sit amet.
+            </h2>
+        </div>
+        <div class="footer w-screen bg-gray-700 text-center text-white">
+            <p>copyright by dev agus on november</p>
+        </div>
+    </div>
+
+<script>
+    const tombol = document.querySelector('.fa-bars');
+    const menu = document.querySelector('ul');
+    tombol.addEventListener('click', function(){
+        menu.classList.toggle('aktif');
+    })
+</script>
+</body>
+</html>

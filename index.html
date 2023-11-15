@@ -96,9 +96,9 @@
         const gmbs = document.querySelectorAll('.gmb');
         for (let i = 0; i< gmbs.length; i++) {
             let tinggiLayar = window.innerHeight;
-            let jarakAtasLayar = gmbs[i].getBoundingClientRect().top();
+            let jarakAtasLayar = gmbs[i].getBoundingClientRect().top;
             let ukuranScroll = 150;
-            if jarakAtasLayar < tinggiLayar-ukuranScroll {
+            if (jarakAtasLayar < tinggiLayar-ukuranScroll) {
                 gmbs[i].classList.add('gmbTampil');
                 gmbs[i].classList.remove('gmbTampil');
             }

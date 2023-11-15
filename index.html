@@ -91,19 +91,29 @@
     tombol.addEventListener('click', function(){
         menu.classList.toggle('aktif');
     })
-    window.addEventListener('scroll',muncul);
-    function muncul(){
-        const gmbs = document.querySelectorAll('.gmb');
-        for (let i = 0; i< gmbs.length; i++) {
-            let tinggiLayar = window.innerHeight;
-            let jarakAtasLayar = gmbs[i].getBoundingClientRect().top;
-            let ukuranScroll = 150;
-            if (jarakAtasLayar < tinggiLayar-ukuranScroll) {
-                gmbs[i].classList.add('gmbTampil');
-                gmbs[i].classList.remove('gmbTampil');
-            }
+    function muncul() {
+    const gmbs = document.querySelectorAll('.gmb');
+    for (let i = 0; i < gmbs.length; i++) {
+        let tinggiLayar = window.innerHeight;
+        let jarakAtasLayar = gmbs[i].getBoundingClientRect().top;
+        let ukuranScroll = 150;
+
+        console.log("jarakAtasLayar: ", jarakAtasLayar);
+        console.log("tinggiLayar: ", tinggiLayar);
+
+        if (jarakAtasLayar < tinggiLayar - ukuranScroll) {
+            gmbs[i].classList.add('gmbTampil');
+            console.log("gmbTampil ditambahkan");
+        } else {
+            gmbs[i].classList.remove('gmbTampil');
+            console.log("gmbTampil dihapus");
         }
     }
+}
+
+// Panggil fungsi muncul saat halaman di-scroll
+window.addEventListener('scroll', muncul);
+
 </script>
 </body>
 </html>
